@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EspecialidadesDAO {
-    private Connection connection;
+    private static Connection connection;
 
     public EspecialidadesDAO(Connection connection){
         this.connection = connection;
@@ -21,21 +23,34 @@ public class EspecialidadesDAO {
         }
     }
 
-    public EspecialidadesModel obtenerEspecialidadPorId(int id) throws SQLException {
-        EspecialidadesModel especialidad = null;
-        String query = "SELECT `Nombre`, `Descripcion` FROM `especialidades_AFS` WHERE 1";
-
-        try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            stmt.setInt(1, id);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    especialidad = new EspecialidadesModel(
-                            rs.getString("Nombre"),
-                            rs.getString("Descripcion")
-                    );
-                }
+    public static List<EspecialidadesModel> getAllEspecialidades() throws SQLException {
+        List<EspecialidadesModel> especialidades = new ArrayList<>();
+        String query = "SELECT * FROM `especialidades_AFS`";
+        try (PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                especialidades.add(new EspecialidadesModel(
+                        rs.getString("Nombre"),
+                        rs.getString("Descripcion")
+                ));
             }
         }
-        return especialidad;
+        return especialidades;
+    }
+
+    public static void updateEspecialidad(EspecialidadesModel model) throws SQLException {
+        String query = "UPDATE `especialidades_AFS` SET `Nombre` = ?,`Descripcion`= ? WHERE `Nombre` = ? ";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(3, model.getNombre());
+            stmt.setString(4, model.getDescripcion());
+            stmt.executeUpdate();
+        }
+    }
+
+    public static void deleteEspecialidad(String Nombre) throws SQLException {
+        String query = "DELETE FROM `especialidades_AFS` WHERE `Nombre` = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(1, Nombre);
+            stmt.executeUpdate();
+        }
     }
 }
