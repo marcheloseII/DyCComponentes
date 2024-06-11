@@ -2,6 +2,7 @@ package view;
 
 import model.ClientModel;
 import model.DoctorModel;
+import model.PreciosModel;
 
 import java.util.List;
 
@@ -53,5 +54,22 @@ public class ConsoleView {
             showClientDetails(client);
             System.out.println("-------------------");
         }
+    }
+
+    public void showPrecioDetails(PreciosModel precio) {
+        System.out.println("Precio Details:");
+        System.out.println("ID: " + precio.getId());
+        System.out.println("Producto: " + precio.getProducto());
+        System.out.println("Precio: " + precio.getPrecio());
+        System.out.println("Fecha de Actualización: " + precio.getFechaActualizacion());
+        System.out.println();
+    }
+
+    public void showAllPrecios(List<PreciosModel> precios) {
+        System.out.println("Lista de Precios:");
+        for (PreciosModel precio : precios) {
+            System.out.println("ID: " + precio.getId() + ", Producto: " + precio.getProducto() + ", Precio: " + precio.getPrecio() + ", Fecha de Actualización: " + precio.getFechaActualizacion());
+        }
+        System.out.println();
     }
 }

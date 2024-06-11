@@ -29,4 +29,47 @@ public class PreciosController {
             viewConsole.errorMessage("Error al insertar datos: " + e.getMessage());
         }
     }
+
+    public void getPrecioByID(int precioID) {
+        try {
+            PreciosModel precio = preciosDAO.getPrecioByID(precioID);
+            if (precio != null) {
+                viewConsole.showPrecioDetails(precio);
+            } else {
+                viewConsole.showMessage("Precio no encontrado");
+            }
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al obtener datos: " + e.getMessage());
+        }
+    }
+
+    public void getAllPrecios() {
+        try {
+            List<PreciosModel> precios = preciosDAO.getAllPrecios();
+            viewConsole.showAllPrecios(precios);
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al obtener lista de precios: " + e.getMessage());
+        }
+    }
+
+    public void updatePrecio(int precioID, String producto, int precio, Date fechaActualizacion) {
+        PreciosModel data = new PreciosModel(precioID, producto, precio, fechaActualizacion);
+
+        try {
+            preciosDAO.updatePrecio(data);
+            viewConsole.showMessage("Actualización de datos correcta");
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al actualizar datos: " + e.getMessage());
+        }
+    }
+
+    public void deletePrecio(int precioID) {
+        try {
+            preciosDAO.deletePrecio(precioID);
+            viewConsole.showMessage("Eliminación de datos correcta");
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al eliminar datos: " + e.getMessage());
+        }
+    }
+
 }
