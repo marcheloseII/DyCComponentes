@@ -40,8 +40,8 @@ public class EspecialidadesDAO {
     public static void updateEspecialidad(EspecialidadesModel model) throws SQLException {
         String query = "UPDATE `especialidades_AFS` SET `Nombre` = ?,`Descripcion`= ? WHERE `Nombre` = ? ";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            stmt.setString(3, model.getNombre());
-            stmt.setString(4, model.getDescripcion());
+            stmt.setString(1, model.getNombre());
+            stmt.setString(2, model.getDescripcion());
             stmt.executeUpdate();
         }
     }
