@@ -10,7 +10,6 @@ public class conexion {
     private static final String USER = "u484426513_diseno224";
     private static final String PASSWORD = "#7cYr646u@*Rp.P";
 
-
     public static Connection getConnection(){
         Connection connection = null;
         try {

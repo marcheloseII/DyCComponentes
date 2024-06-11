@@ -17,7 +17,7 @@ public class PreciosDAO {
     }
 
     public void createPrecio(PreciosModel model) throws SQLException {
-        String query = "INSERT INTO `Doctors_AFS`(`id`, `producto`, `precio`,`fecha_actualizacion`) VALUES (?,?,?,?)";
+        String query = "INSERT INTO `Precios_AFS`(`id`, `producto`, `precio`,`fecha_actualizacion`) VALUES (?,?,?,?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, model.getId());
             stmt.setString(2, model.getProducto());

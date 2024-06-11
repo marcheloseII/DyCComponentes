@@ -1,6 +1,10 @@
 package org.conexionmysql;
 
-import controller.*;
+import controller.ConexionController;
+import controller.CursoController;
+import controller.DoctorController;
+import controller.EspecialidadesController;
+import controller.PreciosController;
 import view.ConsoleView;
 
 import java.sql.Date;
