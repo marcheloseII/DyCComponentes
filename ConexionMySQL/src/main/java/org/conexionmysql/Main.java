@@ -39,9 +39,9 @@ public class Main {
         doctorController.insertDoctor(doctorID, name, birthdate, sex, nationality, civilStatus, address, phoneNumber, email);*/
 
         PreciosController preciosController = new PreciosController(consoleView);
-        int id = 1;
+        int id = 12;
         String producto = "Acetaminofen";
-        int precio = 1;
+        int precio = 25;
         Date fecha_actualizacion = new Date(2024,06,10);
         preciosController.insertPrecio(id, producto, precio,fecha_actualizacion);
     }
