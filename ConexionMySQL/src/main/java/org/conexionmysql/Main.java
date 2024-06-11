@@ -22,7 +22,7 @@ public class Main {
         cursoController.agregarCurso(nombre, estado);*/
 
         //Insert a list of Doctors
-        DoctorController doctorController = new DoctorController(consoleView);
+        /*DoctorController doctorController = new DoctorController(consoleView);
         int doctorID = 2;
         String name = "Robert";
         Date birthdate = new Date(1978,05,12);
@@ -32,13 +32,13 @@ public class Main {
         String address = "123 Main St, Sprinfield, IL";
         int phoneNumber = 555-1234;
         String email = "Robert@example.com";
-        doctorController.insertDoctor(doctorID, name, birthdate, sex, nationality, civilStatus, address, phoneNumber, email);
+        doctorController.insertDoctor(doctorID, name, birthdate, sex, nationality, civilStatus, address, phoneNumber, email);*/
 
-        /*PreciosController preciosController = new PreciosController(consoleView);
+        PreciosController preciosController = new PreciosController(consoleView);
         int id = 1;
         String producto = "Acetaminofen";
         int precio = 1;
         Date fecha_actualizacion = new Date(2024,06,10);
-        preciosController.insertPrecio(id, producto, precio,fecha_actualizacion);*/
+        preciosController.insertPrecio(id, producto, precio,fecha_actualizacion);
     }
 }
