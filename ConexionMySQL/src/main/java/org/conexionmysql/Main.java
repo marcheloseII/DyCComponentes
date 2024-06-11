@@ -16,29 +16,29 @@ public class Main {
         //ConexionController conexionController = new ConexionController(viewConsole);
         //conexionController.openConnection();
         ConsoleView consoleView = new ConsoleView();
-        CursoController cursoController = new CursoController(consoleView);
+        /*CursoController cursoController = new CursoController(consoleView);
         String nombre = "Matematicas";
         int estado = 1;
-        cursoController.agregarCurso(nombre, estado);
+        cursoController.agregarCurso(nombre, estado);*/
 
         //Insert a list of Doctors
-        /*DoctorController doctorController = new DoctorController(consoleView);
-        int doctorID = 1;
-        String name = "John Doe";
+        DoctorController doctorController = new DoctorController(consoleView);
+        int doctorID = 2;
+        String name = "Robert";
         Date birthdate = new Date(1978,05,12);
         String sex = "male";
         String nationality = "american";
         String civilStatus = "married";
         String address = "123 Main St, Sprinfield, IL";
         int phoneNumber = 555-1234;
-        String email = "john.doe@example.com";
-        doctorController.insertDoctor(doctorID, name, birthdate, sex, nationality, civilStatus, address, phoneNumber, email);*/
+        String email = "Robert@example.com";
+        doctorController.insertDoctor(doctorID, name, birthdate, sex, nationality, civilStatus, address, phoneNumber, email);
 
-        PreciosController preciosController = new PreciosController(consoleView);
+        /*PreciosController preciosController = new PreciosController(consoleView);
         int id = 1;
-        String producto = "John Doe";
+        String producto = "Acetaminofen";
         int precio = 1;
-        Date fecha_actualizacion = new Date(1978,05,12);
-        preciosController.insertPrecio(id, producto, precio,fecha_actualizacion);
+        Date fecha_actualizacion = new Date(2024,06,10);
+        preciosController.insertPrecio(id, producto, precio,fecha_actualizacion);*/
     }
 }
