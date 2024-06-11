@@ -5,55 +5,55 @@ import controller.CursoController;
 import controller.EspecialidadesController;
 import view.ConsoleView;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello MySQL!");
-        ConsoleView viewConsole = new ConsoleView();
-        //ConexionController conexionController = new ConexionController(viewConsole);
-        //conexionController.openConnection();
+        System.out.println("¡Hola MySQL!");
+
         ConsoleView consoleView = new ConsoleView();
         CursoController cursoController = new CursoController(consoleView);
-        String nombre = "Matematicas";
-        int estado = 1;
-        cursoController.agregarCurso(nombre, estado);
 
-        //Especialidades agregar
-        /*ConsoleView consoleView = new ConsoleView();
+        String nombreCurso = "Matemáticas";
+        int estadoCurso = 1;
+        cursoController.agregarCurso(nombreCurso, estadoCurso);
+
+        // Descomentar para agregar Especialidades
+        /*
         EspecialidadesController especialidadesController = new EspecialidadesController(consoleView);
-        String nombre = "Neurología";
-        String descripcion = "La neurologia es la rama de la medicina que estudia el sistema nervioso. Específicamente se ocupa de la prevención, diagnóstico, tratamiento y rehabilitación de todas las enfermedades que involucran al sistema nervioso central, sistema nervioso periférico y el sistema nervioso autónomo.";
-        especialidadesController.agregarEspecialidad(nombre, descripcion);*/
+        String nombreEspecialidad = "Neurología";
+        String descripcionEspecialidad = "La neurología es la rama de la medicina que estudia el sistema nervioso. Específicamente se ocupa de la prevención, diagnóstico, tratamiento y rehabilitación de todas las enfermedades que involucran al sistema nervioso central, sistema nervioso periférico y el sistema nervioso autónomo.";
+        especialidadesController.agregarEspecialidad(nombreEspecialidad, descripcionEspecialidad);
+        */
 
         boolean exit = false;
 
         while (!exit) {
             displayMainMenu();
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); // Consumir nueva línea
 
             switch (choice) {
                 case 1:
-                    crudMenu("Doctor", "Doctors");
+                    crudMenu("Doctor", "Doctores");
                     break;
                 case 2:
-                    crudMenu("Price", "Prices");
+                    crudMenu("Precio", "Precios");
                     break;
                 case 3:
-                    crudMenu("Medical Prescription", "Medical Prescriptions");
+                    crudMenu("Receta Médica", "Recetas Médicas");
                     break;
                 case 4:
-                    crudMenu("Specialty", "Specialties");
+                    crudMenu("Especialidad", "Especialidades");
                     break;
                 case 5:
                     exit = true;
-                    System.out.println("Exiting the program...");
+                    System.out.println("Saliendo del programa...");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                    System.out.println("Opción inválida. Por favor, ingrese un número entre 1 y 5.");
             }
         }
 
@@ -61,13 +61,13 @@ public class Main {
     }
 
     private static void displayMainMenu() {
-        System.out.println("==== Drug Store Management System ====");
-        System.out.println("1. Manage Doctors");
-        System.out.println("2. Manage Prices");
-        System.out.println("3. Manage Medical Prescriptions");
-        System.out.println("4. Manage Specialties");
-        System.out.println("5. Exit");
-        System.out.print("Enter your choice: ");
+        System.out.println("==== Sistema de Gestión de Farmacia ====");
+        System.out.println("1. Gestionar Doctores");
+        System.out.println("2. Gestionar Precios");
+        System.out.println("3. Gestionar Recetas Médicas");
+        System.out.println("4. Gestionar Especialidades");
+        System.out.println("5. Salir");
+        System.out.print("Ingrese su elección: ");
     }
 
     private static void crudMenu(String entity, String tableName) {
@@ -76,7 +76,7 @@ public class Main {
         while (!back) {
             displayCRUDMenu(entity, tableName);
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); // Consumir nueva línea
 
             switch (choice) {
                 case 1:
@@ -95,39 +95,38 @@ public class Main {
                     back = true;
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                    System.out.println("Opción inválida. Por favor, ingrese un número entre 1 y 5.");
             }
         }
     }
 
     private static void displayCRUDMenu(String entity, String tableName) {
-        System.out.println("==== " + entity + " Menu ====");
-        System.out.println("1. Add a new " + entity);
-        System.out.println("2. View all " + tableName);
-        System.out.println("3. Update a " + entity);
-        System.out.println("4. Delete a " + entity);
-        System.out.println("5. Back to Main Menu");
-        System.out.print("Enter your choice: ");
+        System.out.println("==== Menú de " + entity + " ====");
+        System.out.println("1. Agregar un nuevo " + entity);
+        System.out.println("2. Ver todos los " + tableName);
+        System.out.println("3. Actualizar un " + entity);
+        System.out.println("4. Eliminar un " + entity);
+        System.out.println("5. Volver al Menú Principal");
+        System.out.print("Ingrese su elección: ");
     }
 
     private static void createEntity(String entity) {
-        System.out.println("Creating a new " + entity);
-        // Implement logic to add a new entity
+        System.out.println("Creando un nuevo " + entity);
+        // Implementar lógica para agregar una nueva entidad
     }
 
     private static void viewEntities(String tableName) {
-        System.out.println("Viewing all " + tableName);
-        // Implement logic to view all entities
+        System.out.println("Viendo todos los " + tableName);
+        // Implementar lógica para ver todas las entidades
     }
 
     private static void updateEntity(String entity) {
-        System.out.println("Updating a " + entity);
-        // Implement logic to update an entity
+        System.out.println("Actualizando un " + entity);
+        // Implementar lógica para actualizar una entidad
     }
 
     private static void deleteEntity(String entity) {
-        System.out.println("Deleting a " + entity);
-        // Implement logic to delete an entity
+        System.out.println("Eliminando un " + entity);
+        // Implementar lógica para eliminar una entidad
     }
-
 }
