@@ -32,7 +32,7 @@ public class PreciosController {
             viewConsole.errorMessage("Error al insertar datos: " + e.getMessage());
         }
     }
-
+/*
     public void getPrecioByID(int precioID) {
         try {
             PreciosModel precio = preciosDAO.getPrecioByID(precioID);
@@ -45,7 +45,7 @@ public class PreciosController {
             viewConsole.errorMessage("Error al obtener datos: " + e.getMessage());
         }
     }
-
+*/
     public void getAllPrecios() {
         try {
             List<PreciosModel> precios = preciosDAO.getAllPrecios();

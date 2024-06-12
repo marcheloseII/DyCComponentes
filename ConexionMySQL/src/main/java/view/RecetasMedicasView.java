@@ -5,14 +5,18 @@ import model.RecetasMedicasModel;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class RecetasMedicasView implements CRUDView {
+    Scanner scanner;
+
     private RecetasMedicasController recetasMedicasController;
 
     public RecetasMedicasView() {
         recetasMedicasController = new RecetasMedicasController(this, new ConsoleView());
+        this.scanner = new Scanner(System.in);
     }
-
+/*
     public void showRecetaMedicaDetails(RecetasMedicasModel recetaMedica) {
         System.out.println("Receta Médica Details:");
         System.out.println("ID: " + recetaMedica.getId());
@@ -22,7 +26,7 @@ public class RecetasMedicasView implements CRUDView {
         System.out.println("Fecha de Prescripción: " + recetaMedica.getFechaPrescripcion());
         System.out.println();
     }
-
+*/
     public void showAllRecetasMedicas(List<RecetasMedicasModel> recetasMedicas) {
         System.out.println("Lista de Recetas Médicas:");
         for (RecetasMedicasModel recetaMedica : recetasMedicas) {
@@ -44,25 +48,47 @@ public class RecetasMedicasView implements CRUDView {
 
     @Override
     public void crear() {
-        // Lógica para crear una receta médica
+        System.out.print("Ingrese el id de la receta: ");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.print("Ingrese el nombre del paciente: ");
+        String paciente = scanner.nextLine();
+        System.out.print("Ingrese el nombre del medicamento: ");
+        String medicamento = scanner.nextLine();
+        System.out.print("Ingrese la cantidad de la dosis: ");
+        String dosis = scanner.nextLine();
+        System.out.print("Ingrese la fecha de prescripcion del precio (yyyy-MM-dd): ");
+        Date fecha_prescripcion = Date.valueOf(scanner.nextLine());
+        recetasMedicasController.insertRecetasMedicas(id, paciente, medicamento, dosis,fecha_prescripcion);
         System.out.println("Crear receta médica.");
     }
 
     @Override
     public void leer() {
-        // Lógica para leer recetas médicas
+        recetasMedicasController.getAllRecetasMedicas();
         System.out.println("Leer recetas médicas.");
     }
 
     @Override
     public void actualizar() {
-        // Lógica para actualizar una receta médica
+        System.out.print("Ingrese el id de la receta: ");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.print("Ingrese el nombre del paciente: ");
+        String paciente = scanner.nextLine();
+        System.out.print("Ingrese el nombre del medicamento: ");
+        String medicamento = scanner.nextLine();
+        System.out.print("Ingrese la cantidad de la dosis: ");
+        String dosis = scanner.nextLine();
+        System.out.print("Ingrese la fecha de prescripcion del precio (yyyy-MM-dd): ");
+        Date fecha_prescripcion = Date.valueOf(scanner.nextLine());
+        recetasMedicasController.updateRecetaMedica(id, paciente, medicamento, dosis,fecha_prescripcion);
         System.out.println("Actualizar recetas médicas.");
     }
 
     @Override
     public void eliminar() {
-        // Lógica para eliminar una receta médica
+        System.out.print("Ingrese el id del precio a eliminar: ");
+        int id = Integer.parseInt(scanner.nextLine());
+        recetasMedicasController.deleteRecetaMedica(id);
         System.out.println("Eliminar recetas médicas.");
     }
 }

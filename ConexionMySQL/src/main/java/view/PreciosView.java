@@ -18,7 +18,7 @@ public class PreciosView implements CRUDView {
         preciosController = new PreciosController(this, new ConsoleView());
         this.scanner = new Scanner(System.in);
     }
-
+/*
     public void showPrecioDetails(PreciosModel precio) {
         System.out.println("Precio Details:");
         System.out.println("ID: " + precio.getId());
@@ -27,7 +27,7 @@ public class PreciosView implements CRUDView {
         System.out.println("Fecha de Actualización: " + precio.getFechaActualizacion());
         System.out.println();
     }
-
+*/
     public void showAllPrecios(List<PreciosModel> precios) {
         System.out.println("Lista de Precios:");
         for (PreciosModel precio : precios) {
@@ -66,7 +66,7 @@ public class PreciosView implements CRUDView {
         int precio = Integer.parseInt(scanner.nextLine());
         System.out.print("Ingrese la fecha de actualización del precio (yyyy-MM-dd): ");
         Date fecha_actualizacion = Date.valueOf(scanner.nextLine());
-        preciosController.insertPrecio(id, producto, precio, fecha_actualizacion);
+        preciosController.updatePrecio(id, producto, precio, fecha_actualizacion);
         System.out.println("Actualizar precios.");
     }
 
