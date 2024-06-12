@@ -7,12 +7,14 @@ import model.EspecialidadesModel;
 import java.util.List;
 import java.util.Scanner;
 
-public class EspecialidadesView {
-    private EspecialidadesController especialidadesController;
+public class EspecialidadesView implements CRUDView {
+
     private Scanner scanner;
 
-    public EspecialidadesView(EspecialidadesController controller) {
-        this.especialidadesController = controller;
+    private EspecialidadesController especialidadesController;
+
+    public EspecialidadesView() {
+        especialidadesController = new EspecialidadesController(new ConsoleView(),this);
         this.scanner = new Scanner(System.in);
     }
 

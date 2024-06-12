@@ -7,11 +7,13 @@ public class MenuView {
     private Scanner scanner;
     private PreciosView preciosView;
     private RecetasMedicasView recetasMedicasView;
+    private EspecialidadesView especialidadesView;
 
     public MenuView() {
         scanner = new Scanner(System.in);
         preciosView = new PreciosView();
         recetasMedicasView = new RecetasMedicasView();
+        especialidadesView = new EspecialidadesView();
     }
 
     public void showMainMenu() {
@@ -31,6 +33,9 @@ public class MenuView {
                     break;
                 case 2:
                     manageCRUD(recetasMedicasView);
+                    break;
+                case 5:
+                    manageCRUD(especialidadesView);
                     break;
                 case 0:
                     System.out.println("Saliendo del programa.");

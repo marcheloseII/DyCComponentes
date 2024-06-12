@@ -4,6 +4,7 @@ import model.EspecialidadesDAO;
 import model.EspecialidadesModel;
 import model.conexion;
 import view.ConsoleView;
+import view.EspecialidadesView;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -15,7 +16,7 @@ public class EspecialidadesController {
     private EspecialidadesView viewEspecialidades;
     private EspecialidadesDAO especialidadesDAO;
 
-    public EspecialidadesController(ConsoleView viewConsole){
+    public EspecialidadesController(ConsoleView viewConsole, EspecialidadesView especialidadesView){
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
         this.especialidadesDAO = new EspecialidadesDAO(connection);
