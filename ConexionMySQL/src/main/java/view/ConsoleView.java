@@ -3,6 +3,7 @@ package view;
 import model.ClientModel;
 import model.DoctorModel;
 import model.PreciosModel;
+import model.RecetasMedicasModel;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class ConsoleView {
     public void errorMessage(String message){
         System.err.println(message);
     }
+
     public void showDoctorDetails(DoctorModel doctor) {
         System.out.println("Doctor ID: " + doctor.getDoctorID());
         System.out.println("Name: " + doctor.getName());
@@ -65,10 +67,34 @@ public class ConsoleView {
         System.out.println();
     }
 
+    //Precios
     public void showAllPrecios(List<PreciosModel> precios) {
         System.out.println("Lista de Precios:");
         for (PreciosModel precio : precios) {
             System.out.println("ID: " + precio.getId() + ", Producto: " + precio.getProducto() + ", Precio: " + precio.getPrecio() + ", Fecha de Actualización: " + precio.getFechaActualizacion());
+        }
+        System.out.println();
+    }
+
+    //Recetas Medicas
+    public void showRecetaMedicaDetails(RecetasMedicasModel recetaMedica) {
+        System.out.println("Receta Médica Details:");
+        System.out.println("ID: " + recetaMedica.getId());
+        System.out.println("Paciente: " + recetaMedica.getPaciente());
+        System.out.println("Medicamento: " + recetaMedica.getMedicamento());
+        System.out.println("Dosis: " + recetaMedica.getDosis());
+        System.out.println("Fecha de Prescripción: " + recetaMedica.getFechaPrescripcion());
+        System.out.println();
+    }
+
+    public void showAllRecetasMedicas(List<RecetasMedicasModel> recetasMedicas) {
+        System.out.println("Lista de Recetas Médicas:");
+        for (RecetasMedicasModel recetaMedica : recetasMedicas) {
+            System.out.println("ID: " + recetaMedica.getId() +
+                    ", Paciente: " + recetaMedica.getPaciente() +
+                    ", Medicamento: " + recetaMedica.getMedicamento() +
+                    ", Dosis: " + recetaMedica.getDosis() +
+                    ", Fecha de Prescripción: " + recetaMedica.getFechaPrescripcion());
         }
         System.out.println();
     }
