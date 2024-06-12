@@ -7,17 +7,18 @@ import view.ConsoleView;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 public class EspecialidadesController {
 
     private ConsoleView viewConsole;
-
-    private EspecialidadesDAO cursoDAO;
+    private EspecialidadesView viewEspecialidades;
+    private EspecialidadesDAO especialidadesDAO;
 
     public EspecialidadesController(ConsoleView viewConsole){
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
-        this.cursoDAO = new EspecialidadesDAO(connection);
+        this.especialidadesDAO = new EspecialidadesDAO(connection);
     }
 
     public void agregarEspecialidad(String nombre, String descripcion){
@@ -25,10 +26,41 @@ public class EspecialidadesController {
 
         try
         {
-            cursoDAO.agregarEspecialidad(datos);
+            especialidadesDAO.agregarEspecialidad(datos);
             viewConsole.showMessage("Insercion de datos correcta");
         }catch (SQLException e){
             viewConsole.errorMessage("Error al insertar datos: " + e.getMessage());
+        }
+    }
+
+    public void getAllEspecialidades() {
+        try {
+            List<EspecialidadesModel> especialidades = EspecialidadesDAO.getAllEspecialidades();
+            especialidadesView.showAllEspecialidades(especialidades);
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al obtener lista de especialidades: " + e.getMessage());
+        }
+    }
+
+    // Update
+    public void updateEspecialidad(String Nombre, String Descripcion) {
+        EspecialidadesModel data = new EspecialidadesModel(Nombre, Descripcion);
+
+        try {
+            EspecialidadesDAO.updateEspecialidad(data);
+            viewConsole.showMessage("Actualización de datos correcta");
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al actualizar datos: " + e.getMessage());
+        }
+    }
+
+    // Delete
+    public void deleteEspecialidad(String nombre) {
+        try {
+            EspecialidadesDAO.deleteEspecialidad(nombre);
+            viewConsole.showMessage("Eliminación de datos correcta");
+        } catch (SQLException e) {
+            viewConsole.errorMessage("Error al eliminar datos: " + e.getMessage());
         }
     }
 }
