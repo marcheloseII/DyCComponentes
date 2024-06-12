@@ -45,15 +45,8 @@ public class PreciosView implements CRUDView {
         System.out.print("Ingrese el precio del precio: ");
         int precio = Integer.parseInt(scanner.nextLine());
         System.out.print("Ingrese la fecha de actualización del precio (yyyy-MM-dd): ");
-        String fechaActualizacionStr = scanner.nextLine();
-        Date fechaActualizacion = null;
-        try {
-            fechaActualizacion = (Date) new SimpleDateFormat("yyyy-MM-dd").parse(fechaActualizacionStr);
-        } catch (ParseException e) {
-            System.out.println("Formato de fecha incorrecto. Use el formato yyyy-MM-dd.");
-            return;
-        }
-        preciosController.insertPrecio(id, producto, precio, fechaActualizacion);
+        Date fecha_actualizacion = Date.valueOf(scanner.nextLine());
+        preciosController.insertPrecio(id, producto, precio, fecha_actualizacion);
         System.out.println("Precio creado exitosamente.");
     }
 
@@ -72,15 +65,8 @@ public class PreciosView implements CRUDView {
         System.out.print("Ingrese el precio del precio: ");
         int precio = Integer.parseInt(scanner.nextLine());
         System.out.print("Ingrese la fecha de actualización del precio (yyyy-MM-dd): ");
-        String fechaActualizacionStr = scanner.nextLine();
-        Date fechaActualizacion = null;
-        try {
-            fechaActualizacion = (Date) new SimpleDateFormat("yyyy-MM-dd").parse(fechaActualizacionStr);
-        } catch (ParseException e) {
-            System.out.println("Formato de fecha incorrecto. Use el formato yyyy-MM-dd.");
-            return;
-        }
-        preciosController.updatePrecio(id, producto, precio, fechaActualizacion);
+        Date fecha_actualizacion = Date.valueOf(scanner.nextLine());
+        preciosController.insertPrecio(id, producto, precio, fecha_actualizacion);
         System.out.println("Actualizar precios.");
     }
 
