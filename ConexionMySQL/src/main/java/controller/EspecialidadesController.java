@@ -37,7 +37,7 @@ public class EspecialidadesController {
     public void getAllEspecialidades() {
         try {
             List<EspecialidadesModel> especialidades = EspecialidadesDAO.getAllEspecialidades();
-            especialidadesView.showAllEspecialidades(especialidades);
+            viewEspecialidades.showAllEspecialides(especialidades);
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al obtener lista de especialidades: " + e.getMessage());
         }
