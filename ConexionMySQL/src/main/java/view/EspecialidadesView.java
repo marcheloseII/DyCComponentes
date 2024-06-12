@@ -2,6 +2,9 @@ package view;
 
 
 import controller.EspecialidadesController;
+import model.EspecialidadesModel;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class EspecialidadesView {
@@ -11,6 +14,14 @@ public class EspecialidadesView {
     public EspecialidadesView(EspecialidadesController controller) {
         this.especialidadesController = controller;
         this.scanner = new Scanner(System.in);
+    }
+
+    public void showAllEspecialides(List<EspecialidadesModel> especialidades) {
+        System.out.println("Lista de especialidades:");
+        for (EspecialidadesModel especialidad : especialidades) {
+            System.out.println("ID: " + especialidad.getId() + ", Nombre: " + especialidad.getNombre() + ", Descripcion: " + especialidad.getDescripcion();
+        }
+        System.out.println();
     }
 
     @Override
@@ -25,6 +36,7 @@ public class EspecialidadesView {
     @Override
     public void leer() {
         especialidadesController.getAllEspecialidades();
+        System.out.println("Leer especialidades");
     }
 
     @Override
