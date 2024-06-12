@@ -19,7 +19,7 @@ public class EspecialidadesView {
     public void showAllEspecialides(List<EspecialidadesModel> especialidades) {
         System.out.println("Lista de especialidades:");
         for (EspecialidadesModel especialidad : especialidades) {
-            System.out.println("ID: " + especialidad.getId() + ", Nombre: " + especialidad.getNombre() + ", Descripcion: " + especialidad.getDescripcion();
+            System.out.println("ID: " + especialidad.getId() + ", Nombre: " + especialidad.getNombre() + ", Descripcion: " + especialidad.getDescripcion());
         }
         System.out.println();
     }
