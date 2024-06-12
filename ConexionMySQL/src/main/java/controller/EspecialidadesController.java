@@ -12,13 +12,13 @@ import java.util.List;
 public class EspecialidadesController {
 
     private ConsoleView viewConsole;
-
-    private EspecialidadesDAO cursoDAO;
+    private EspecialidadesView viewEspecialidades;
+    private EspecialidadesDAO especialidadesDAO;
 
     public EspecialidadesController(ConsoleView viewConsole){
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
-        this.cursoDAO = new EspecialidadesDAO(connection);
+        this.especialidadesDAO = new EspecialidadesDAO(connection);
     }
 
     public void agregarEspecialidad(String nombre, String descripcion){
@@ -26,7 +26,7 @@ public class EspecialidadesController {
 
         try
         {
-            cursoDAO.agregarEspecialidad(datos);
+            especialidadesDAO.agregarEspecialidad(datos);
             viewConsole.showMessage("Insercion de datos correcta");
         }catch (SQLException e){
             viewConsole.errorMessage("Error al insertar datos: " + e.getMessage());
@@ -36,7 +36,7 @@ public class EspecialidadesController {
     public void getAllEspecialidades() {
         try {
             List<EspecialidadesModel> especialidades = EspecialidadesDAO.getAllEspecialidades();
-            viewConsole.showAllEspecialidades(especialidades);
+            especialidadesView.showAllEspecialidades(especialidades);
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al obtener lista de especialidades: " + e.getMessage());
         }

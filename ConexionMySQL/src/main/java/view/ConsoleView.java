@@ -13,16 +13,4 @@ public class ConsoleView {
         System.err.println(message);
     }
 
-    public void showEspecialidadDetails(EspecialidadesModel especialidad) {
-        System.out.println("Nombre: " + especialidad.getNombre());
-        System.out.println("Descripcion: " + especialidad.getDescripcion());;
-    }
-
-    public void showAllEspecialidades(List<EspecialidadesModel> especialidades) {
-        for (EspecialidadesModel especialidad : especialidades) {
-            showEspecialidadDetails(especialidad);
-            System.out.println("-------------------");
-        }
-    }
-
 }
