@@ -1,40 +1,45 @@
 package view;
 
+
 import controller.EspecialidadesController;
 import java.util.Scanner;
 
-public class EspecialidadView {
-    private EspecialidadesController controller;
+public class EspecialidadesView {
+    private EspecialidadesController especialidadesController;
     private Scanner scanner;
 
-    public EspecialidadView(EspecialidadesController controller) {
-        this.controller = controller;
+    public EspecialidadesView(EspecialidadesController controller) {
+        this.especialidadesController = controller;
         this.scanner = new Scanner(System.in);
     }
 
-    private void agregarEspecialidad() {
+    @Override
+    public void crear() {
         System.out.print("Ingrese el nombre de la especialidad: ");
         String nombre = scanner.nextLine();
         System.out.print("Ingrese la descripción de la especialidad: ");
         String descripcion = scanner.nextLine();
-        controller.agregarEspecialidad(nombre, descripcion);
+        especialidadesController.agregarEspecialidad(nombre, descripcion);
     }
 
-    private void mostrarTodasLasEspecialidades() {
-        controller.getAllEspecialidades();
+    @Override
+    public void leer() {
+        especialidadesController.getAllEspecialidades();
     }
 
-    private void actualizarEspecialidad() {
+    @Override
+    public void actualizar() {
         System.out.print("Ingrese el nombre de la especialidad a actualizar: ");
         String nombreEspecialidad = scanner.nextLine();
         System.out.print("Ingrese la nueva descripción de la especialidad: ");
         String nuevaDescripcion = scanner.nextLine();
-        controller.updateEspecialidad(nombreEspecialidad, nuevaDescripcion);
+        especialidadesController.updateEspecialidad(nombreEspecialidad, nuevaDescripcion);
     }
 
-    private void eliminarEspecialidad() {
+    @Override
+    public void eliminar() {
         System.out.print("Ingrese el nombre de la especialidad a eliminar: ");
         String nombreEliminar = scanner.nextLine();
-        controller.deleteEspecialidad(nombreEliminar);
+        especialidadesController.deleteEspecialidad(nombreEliminar);
     }
 }
