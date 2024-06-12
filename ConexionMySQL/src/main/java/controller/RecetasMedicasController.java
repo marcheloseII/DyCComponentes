@@ -4,6 +4,7 @@ import model.RecetasMedicasDAO;
 import model.RecetasMedicasModel;
 import model.conexion;
 import view.ConsoleView;
+import view.RecetasMedicasView;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -15,7 +16,7 @@ public class RecetasMedicasController {
     private ConsoleView viewConsole;
     private RecetasMedicasDAO recetasMedicasDAO;
 
-    public RecetasMedicasController(ConsoleView viewConsole) {
+    public RecetasMedicasController(RecetasMedicasView recetasMedicasView, ConsoleView viewConsole) {
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
         this.recetasMedicasDAO = new RecetasMedicasDAO(connection);

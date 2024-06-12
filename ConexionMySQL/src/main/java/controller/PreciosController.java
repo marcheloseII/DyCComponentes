@@ -2,6 +2,7 @@ package controller;
 
 import model.*;
 import view.ConsoleView;
+import view.PreciosView;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -11,10 +12,12 @@ import java.util.List;
 public class PreciosController {
 
     private ConsoleView viewConsole;
+    private PreciosView viewPrecios;
     private PreciosDAO preciosDAO;
 
-    public PreciosController(ConsoleView viewConsole) {
+    public PreciosController(PreciosView viewPrecios, ConsoleView viewConsole) {
         this.viewConsole = viewConsole;
+        this.viewPrecios = viewPrecios;
         Connection connection = conexion.getConnection();
         this.preciosDAO = new PreciosDAO(connection);
     }
@@ -34,7 +37,7 @@ public class PreciosController {
         try {
             PreciosModel precio = preciosDAO.getPrecioByID(precioID);
             if (precio != null) {
-                viewConsole.showPrecioDetails(precio);
+                viewPrecios.showPrecioDetails(precio);
             } else {
                 viewConsole.showMessage("Precio no encontrado");
             }
@@ -46,7 +49,7 @@ public class PreciosController {
     public void getAllPrecios() {
         try {
             List<PreciosModel> precios = preciosDAO.getAllPrecios();
-            viewConsole.showAllPrecios(precios);
+            viewPrecios.showAllPrecios(precios);
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al obtener lista de precios: " + e.getMessage());
         }

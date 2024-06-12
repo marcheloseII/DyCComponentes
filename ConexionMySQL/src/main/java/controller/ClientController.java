@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ClientController {
-    private ConsoleView viewConsole;
+    /*private ConsoleView viewConsole;
     private ClientDAO clientDAO;
 
     public ClientController(ConsoleView viewConsole) {
@@ -76,5 +76,5 @@ public class ClientController {
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al eliminar datos: " + e.getMessage());
         }
-    }
+    }*/
 }

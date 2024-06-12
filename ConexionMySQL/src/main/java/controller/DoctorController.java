@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class DoctorController {
-    private ConsoleView viewConsole;
+    /*private ConsoleView viewConsole;
     private DoctorDAO doctorDAO;
 
     public DoctorController(ConsoleView viewConsole) {
@@ -76,5 +76,5 @@ public class DoctorController {
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al eliminar datos: " + e.getMessage());
         }
-    }
+    }*/
 }
