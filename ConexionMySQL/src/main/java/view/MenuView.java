@@ -8,12 +8,16 @@ public class MenuView {
     private PreciosView preciosView;
     private RecetasMedicasView recetasMedicasView;
     private EspecialidadesView especialidadesView;
+    private DoctorView doctorView;
+    private ClientView clientView;
 
     public MenuView() {
         scanner = new Scanner(System.in);
         preciosView = new PreciosView();
         recetasMedicasView = new RecetasMedicasView();
         especialidadesView = new EspecialidadesView();
+        doctorView = new DoctorView();
+        clientView = new ClientView();
     }
 
     public void showMainMenu() {
@@ -23,6 +27,9 @@ public class MenuView {
             System.out.println("Seleccione una tabla:");
             System.out.println("1. Precios");
             System.out.println("2. Recetas Medicas");
+            System.out.println("3. Doctores");
+            System.out.println("4. Clientes");
+            System.out.println("5. Especialidades");
             System.out.println("0. Salir");
 
             option = getValidIntInput();
@@ -33,6 +40,12 @@ public class MenuView {
                     break;
                 case 2:
                     manageCRUD(recetasMedicasView);
+                    break;
+                case 3:
+                    manageCRUD(doctorView);
+                    break;
+                case 4:
+                    manageCRUD(clientView);
                     break;
                 case 5:
                     manageCRUD(especialidadesView);

@@ -3,6 +3,7 @@ package controller;
 import model.ClientDAO;
 import model.ClientModel;
 import model.conexion;
+import view.ClientView;
 import view.ConsoleView;
 
 import java.sql.Connection;
@@ -11,10 +12,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ClientController {
-    /*private ConsoleView viewConsole;
+    private ConsoleView viewConsole;
+    private ClientView clientView;
     private ClientDAO clientDAO;
 
-    public ClientController(ConsoleView viewConsole) {
+    public ClientController(ClientView viewClient, ConsoleView viewConsole) {
+        this.clientView = viewClient;
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
         this.clientDAO = new ClientDAO(connection);
@@ -37,7 +40,7 @@ public class ClientController {
         try {
             ClientModel client = clientDAO.getClientByID(doctorID);
             if (client != null) {
-                viewConsole.showClientDetails(client);
+                clientView.showClientDetails(client);
             } else {
                 viewConsole.showMessage("Cliente no encontrado");
             }
@@ -50,7 +53,7 @@ public class ClientController {
     public void getAllClients() {
         try {
             List<ClientModel> clients = clientDAO.getAllClients();
-            viewConsole.showAllClients(clients);
+            clientView.showAllClients(clients);
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al obtener lista de doctores: " + e.getMessage());
         }
@@ -76,5 +79,5 @@ public class ClientController {
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al eliminar datos: " + e.getMessage());
         }
-    }*/
+    }
 }

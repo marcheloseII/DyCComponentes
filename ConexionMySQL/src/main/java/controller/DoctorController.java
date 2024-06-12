@@ -4,6 +4,7 @@ import model.DoctorDAO;
 import model.DoctorModel;
 import model.conexion;
 import view.ConsoleView;
+import view.DoctorView;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -11,10 +12,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class DoctorController {
-    /*private ConsoleView viewConsole;
+    private ConsoleView viewConsole;
+    private DoctorView doctorView;
     private DoctorDAO doctorDAO;
 
-    public DoctorController(ConsoleView viewConsole) {
+    public DoctorController(ConsoleView viewConsole, DoctorView doctorView) {
+        this.doctorView = doctorView;
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
         this.doctorDAO = new DoctorDAO(connection);
@@ -37,7 +40,7 @@ public class DoctorController {
         try {
             DoctorModel doctor = doctorDAO.getDoctorByID(doctorID);
             if (doctor != null) {
-                viewConsole.showDoctorDetails(doctor);
+                doctorView.showDoctorDetails(doctor);
             } else {
                 viewConsole.showMessage("Doctor no encontrado");
             }
@@ -50,7 +53,7 @@ public class DoctorController {
     public void getAllDoctors() {
         try {
             List<DoctorModel> doctors = doctorDAO.getAllDoctors();
-            viewConsole.showAllDoctors(doctors);
+            doctorView.showAllDoctors(doctors);
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al obtener lista de doctores: " + e.getMessage());
         }
@@ -76,5 +79,5 @@ public class DoctorController {
         } catch (SQLException e) {
             viewConsole.errorMessage("Error al eliminar datos: " + e.getMessage());
         }
-    }*/
+    }
 }

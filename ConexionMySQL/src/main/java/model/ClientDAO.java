@@ -16,7 +16,7 @@ public class ClientDAO {
 
     // Create a new client record
     public void createClient(ClientModel model) throws SQLException {
-        String query = "INSERT INTO `Client`(`clientID`, `name`, `birthday`, `sex`, `nationality`, `civilStatus`, `address`, `phoneNumber`, `email`, `idNumber`, `bloodType`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO `Clients_AFS`(`clientID`, `name`, `birthday`, `sex`, `nationality`, `civilStatus`, `address`, `phoneNumber`, `email`, `idNumber`, `bloodType`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, model.getClientID());
             stmt.setString(2, model.getName());
@@ -35,7 +35,7 @@ public class ClientDAO {
 
     // Read a client record by ID
     public ClientModel getClientByID(int clientID) throws SQLException {
-        String query = "SELECT * FROM `Client` WHERE `clientID` = ?";
+        String query = "SELECT * FROM `Clients_AFS` WHERE `clientID` = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, clientID);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -62,7 +62,7 @@ public class ClientDAO {
     // Read all client records
     public List<ClientModel> getAllClients() throws SQLException {
         List<ClientModel> clients = new ArrayList<>();
-        String query = "SELECT * FROM `Client`";
+        String query = "SELECT * FROM `Clients_AFS`";
         try (PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 clients.add(new ClientModel(
@@ -85,7 +85,7 @@ public class ClientDAO {
 
     // Update a client record
     public void updateClient(ClientModel model) throws SQLException {
-        String query = "UPDATE `Client` SET `name` = ?, `birthday` = ?, `sex` = ?, `nationality` = ?, `civilStatus` = ?, `address` = ?, `phoneNumber` = ?, `email` = ?, `idNumber` = ?, `bloodType` = ? WHERE `clientID` = ?";
+        String query = "UPDATE `Clients_AFS` SET `name` = ?, `birthday` = ?, `sex` = ?, `nationality` = ?, `civilStatus` = ?, `address` = ?, `phoneNumber` = ?, `email` = ?, `idNumber` = ?, `bloodType` = ? WHERE `clientID` = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, model.getName());
             stmt.setDate(2, model.getBirthdate());
@@ -104,7 +104,7 @@ public class ClientDAO {
 
     // Delete a client record by ID
     public void deleteClient(int clientID) throws SQLException {
-        String query = "DELETE FROM `Client` WHERE `clientID` = ?";
+        String query = "DELETE FROM `Clients_AFS` WHERE `clientID` = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, clientID);
             stmt.executeUpdate();
