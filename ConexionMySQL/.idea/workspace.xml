@@ -5,17 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de proyecto completo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/ClientView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/DoctorView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/EmpleadosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/EmpleadosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/EmpleadosModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/EmpleadosView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ClientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conexionmysql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conexionmysql/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CursoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CursoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ClientDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ClientDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/CursoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/CursoModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/conexion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/CRUDView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/CRUDView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/MenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/MenuView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/PreciosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/PreciosView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +70,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -80,7 +91,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TablaEmpleados&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/chelo/OneDrive/Documentos/GitHub/DyCComponentes/ConexionMySQL&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -98,6 +109,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.conexionmysql.Main" />
       <module name="ConexionMySQL" />
       <extension name="coverage">
@@ -137,6 +150,10 @@
       <workItem from="1718165991095" duration="9000" />
       <workItem from="1718166021060" duration="25000" />
       <workItem from="1718170554232" duration="479000" />
+      <workItem from="1718676270617" duration="3000" />
+      <workItem from="1718676280966" duration="2024000" />
+      <workItem from="1718746082263" duration="3154000" />
+      <workItem from="1718749276445" duration="389000" />
     </task>
     <task id="LOCAL-00001" summary="commit de proyecto completo">
       <created>1718170394386</created>
