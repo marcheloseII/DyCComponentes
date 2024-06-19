@@ -10,6 +10,7 @@ public class MenuView {
     private EspecialidadesView especialidadesView;
     private DoctorView doctorView;
     private ClientView clientView;
+    private SucursalesView sucursalesView;
     private EmpleadosView empleadosView;
 
     public MenuView() {
@@ -19,6 +20,7 @@ public class MenuView {
         especialidadesView = new EspecialidadesView();
         doctorView = new DoctorView();
         clientView = new ClientView();
+        sucursalesView = new SucursalesView();
         empleadosView = new EmpleadosView();
     }
 
@@ -32,6 +34,7 @@ public class MenuView {
             System.out.println("3. Doctores");
             System.out.println("4. Clientes");
             System.out.println("5. Especialidades");
+            System.out.println("6. Sucursales");
             System.out.println("8. Especialidades");
             System.out.println("0. Salir");
 
@@ -53,6 +56,8 @@ public class MenuView {
                 case 5:
                     manageCRUD(especialidadesView);
                     break;
+                case 6:
+                    manageCRUD(sucursalesView);
                 case 8:
                     manageCRUD(empleadosView);
                     break;
