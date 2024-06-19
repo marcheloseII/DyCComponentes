@@ -9,7 +9,8 @@ public class SucursalesModel {
     private String doctorID; // Clave foránea hacia Doctores
     private String recetaID; // Clave foránea hacia Recetas
 
-    public SucursalesModel(String nombre, String locacion, String clientes, String doctores, String recetas) {
+    public SucursalesModel(int id, String nombre, String locacion, String clientes, String doctores, String recetas) {
+        this.id = id;
         this.nombre = nombre;
         this.locacion = locacion;
         this.clienteID = clientes;

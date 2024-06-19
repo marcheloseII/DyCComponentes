@@ -15,13 +15,14 @@ public class SucursalesDAO {
     }
 
     public void agregarSucursal( SucursalesModel objeto) throws SQLException {
-        String query = "INSERT INTO `Sucursales_AFS`(`nombre`, `locacion`, `clienteID`, `doctorID`, `recetaID`) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO `Sucursales_AFS`(`sucursalID`,`nombre`, `locacion`, `clienteID`, `doctorID`, `recetaID`) VALUES (?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)){
-            stmt.setString(1, objeto.getNombre());
-            stmt.setString(2, objeto.getLocacion());
-            stmt.setString(3, objeto.getClienteID());
-            stmt.setString(4, objeto.getDoctorID());
-            stmt.setString(5, objeto.getRecetaID());
+            stmt.setInt(1, objeto.getId());
+            stmt.setString(2, objeto.getNombre());
+            stmt.setString(3, objeto.getLocacion());
+            stmt.setString(4, objeto.getClienteID());
+            stmt.setString(5, objeto.getDoctorID());
+            stmt.setString(6, objeto.getRecetaID());
             stmt.executeUpdate();
         }
     }
@@ -32,6 +33,7 @@ public class SucursalesDAO {
         try (PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 sucursales.add(new SucursalesModel(
+                        rs.getInt("sucursalID"),
                         rs.getString("nombre"),
                         rs.getString("locacion"),
                         rs.getString("clienteID"),

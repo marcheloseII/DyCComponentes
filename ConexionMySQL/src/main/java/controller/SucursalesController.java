@@ -15,14 +15,14 @@ public class SucursalesController {
     private SucursalesDAO sucursalDAO;
 
 
-    public SucursalesController(ConsoleView viewConsole){
+    public SucursalesController(SucursalesView sucursalesview ,ConsoleView viewConsole){
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
         this.sucursalDAO = new SucursalesDAO(connection);
     }
 
-    public void agregarSucursal(String nombre, String locacion, String clientes, String doctores, String recetas){
-        SucursalesModel datos = new SucursalesModel(nombre, locacion, clientes, doctores, recetas);
+    public void agregarSucursal(int id, String nombre, String locacion, String clientes, String doctores, String recetas){
+        SucursalesModel datos = new SucursalesModel(id, nombre, locacion, clientes, doctores, recetas);
 
         try
         {
@@ -35,16 +35,23 @@ public class SucursalesController {
 
     public void getAllSucursales() {
         try {
-            List<SucursalesModel> sucursales = SucursalesDAO.getAllSucursales();
-            sucursalView.showAllSucursales(sucursales);
+            List<SucursalesModel> sucursales = sucursalDAO.getAllSucursales();
+            if (!sucursales.isEmpty()) {
+                System.out.println("Lista de recetas médicas:");
+                for (SucursalesModel sucursal : sucursales) {
+                    System.out.println(sucursal);
+                }
+            } else {
+                System.out.println("No hay recetas médicas registradas.");
+            }
         } catch (SQLException e) {
-            viewConsole.errorMessage("Error al obtener lista de sucursales: " + e.getMessage());
+            System.err.println("Error al obtener lista de recetas médicas: " + e.getMessage());
         }
     }
 
     // Update
-    public void updateSucursal(String nombre, String locacion, String clientes, String doctores, String recetas) {
-        SucursalesModel data = new SucursalesModel(nombre, locacion, clientes, doctores, recetas);
+    public void updateSucursal(int id, String nombre, String locacion, String clientes, String doctores, String recetas) {
+        SucursalesModel data = new SucursalesModel(id, nombre, locacion, clientes, doctores, recetas);
 
         try {
             SucursalesDAO.updateSucursal(data);

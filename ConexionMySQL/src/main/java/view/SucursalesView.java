@@ -1,17 +1,18 @@
 package view;
 
+import controller.RecetasMedicasController;
 import controller.SucursalesController;
 import model.SucursalesModel;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class SucursalesView {
+public class SucursalesView implements CRUDView {
     private SucursalesController sucursalesController;
     private Scanner scanner;
 
-    public SucursalesView(SucursalesController controller) {
-        this.sucursalesController = controller;
+    public SucursalesView() {
+        sucursalesController = new SucursalesController(this, new ConsoleView());
         this.scanner = new Scanner(System.in);
     }
 
@@ -27,6 +28,8 @@ public class SucursalesView {
     @Override
     public void crear() {
         System.out.println("\n--- Insertar Sucursal ---");
+        System.out.print("ID de sucursal: ");
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
         System.out.print("Locacion: ");
@@ -39,7 +42,7 @@ public class SucursalesView {
         String receta = scanner.nextLine();
         System.out.println("--------------------");
 
-        sucursalesController.agregarSucursal(nombre, locacion, doctor, cliente, receta);
+        sucursalesController.agregarSucursal(id, nombre, locacion, doctor, cliente, receta);
     }
 
     @Override
@@ -51,6 +54,8 @@ public class SucursalesView {
     @Override
     public void actualizar() {
         System.out.println("\n--- Actualizar Sucursal ---");
+        System.out.print("ID de sucursal: ");
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
         System.out.print("Locacion: ");
@@ -63,7 +68,7 @@ public class SucursalesView {
         String receta = scanner.nextLine();
         System.out.println("--------------------");
 
-        sucursalesController.updateSucursal(nombre, locacion, doctor, cliente, receta);
+        sucursalesController.updateSucursal(id, nombre, locacion, doctor, cliente, receta);
     }
 
     @Override
