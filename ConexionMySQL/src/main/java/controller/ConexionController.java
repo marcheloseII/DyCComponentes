@@ -16,10 +16,10 @@ public class ConexionController {
     }
 
     public void openConnection(){
-        Connection connection = conexion.getConnection();
-        if ( connection !=null){
+        Connection conn = conexion.getInstance().getConnection();
+        if ( conn !=null){
             try{
-                connection.close();
+                conn.close();
                 viewConsole.showMessage("Conexion Establecida");
             } catch ( SQLException e){
                 viewConsole.errorMessage("Error al conectar"+ e.getMessage());

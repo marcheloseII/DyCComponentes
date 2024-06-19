@@ -18,8 +18,8 @@ public class EspecialidadesController {
 
     public EspecialidadesController(ConsoleView viewConsole, EspecialidadesView especialidadesView){
         this.viewConsole = viewConsole;
-        Connection connection = conexion.getConnection();
-        this.especialidadesDAO = new EspecialidadesDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.especialidadesDAO = new EspecialidadesDAO(conn);
     }
 
     public void agregarEspecialidad(String nombre, String descripcion){

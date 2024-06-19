@@ -19,8 +19,8 @@ public class DoctorController {
     public DoctorController(ConsoleView viewConsole, DoctorView doctorView) {
         this.doctorView = doctorView;
         this.viewConsole = viewConsole;
-        Connection connection = conexion.getConnection();
-        this.doctorDAO = new DoctorDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.doctorDAO = new DoctorDAO(conn);
     }
 
     // Create

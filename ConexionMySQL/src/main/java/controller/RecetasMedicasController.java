@@ -18,8 +18,8 @@ public class RecetasMedicasController {
 
     public RecetasMedicasController(RecetasMedicasView recetasMedicasView, ConsoleView viewConsole) {
         this.viewConsole = viewConsole;
-        Connection connection = conexion.getConnection();
-        this.recetasMedicasDAO = new RecetasMedicasDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.recetasMedicasDAO = new RecetasMedicasDAO(conn);
     }
 
     public void insertRecetasMedicas(int id, String paciente, String medicamento,String dosis, Date fecha_prescripcion) {

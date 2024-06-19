@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de proyecto completo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/PedidosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/PedidosDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/PedidosModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/PedidosView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ConexionMySQL.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="Commit de Creacion de Pedidos y modificacion de DoctoresDAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CursoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/CursoDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/CursoModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DoctorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DoctorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/MenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CursoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/DoctorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DoctorDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/MenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/MenuView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +128,7 @@
       <workItem from="1718165991095" duration="9000" />
       <workItem from="1718166021060" duration="25000" />
       <workItem from="1718170554232" duration="479000" />
-      <workItem from="1718719597820" duration="17814000" />
+      <workItem from="1718719597820" duration="19244000" />
     </task>
     <task id="LOCAL-00001" summary="commit de proyecto completo">
       <created>1718170394386</created>
@@ -153,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718170394386</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit de Creacion de Pedidos y modificacion de DoctoresDAO">
+      <created>1718766773248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718766773248</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +164,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit de proyecto completo" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit de proyecto completo" />
+    <MESSAGE value="Commit de Creacion de Pedidos y modificacion de DoctoresDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit de Creacion de Pedidos y modificacion de DoctoresDAO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
