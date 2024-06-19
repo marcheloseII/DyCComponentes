@@ -10,6 +10,7 @@ public class MenuView {
     private EspecialidadesView especialidadesView;
     private DoctorView doctorView;
     private ClientView clientView;
+    private PedidosView pedidosView;
 
     public MenuView() {
         scanner = new Scanner(System.in);
@@ -18,6 +19,7 @@ public class MenuView {
         especialidadesView = new EspecialidadesView();
         doctorView = new DoctorView();
         clientView = new ClientView();
+        pedidosView = new PedidosView();
     }
 
     public void showMainMenu() {
@@ -30,6 +32,8 @@ public class MenuView {
             System.out.println("3. Doctores");
             System.out.println("4. Clientes");
             System.out.println("5. Especialidades");
+
+            System.out.println("7. Pedidos");
             System.out.println("0. Salir");
 
             option = getValidIntInput();
@@ -49,6 +53,9 @@ public class MenuView {
                     break;
                 case 5:
                     manageCRUD(especialidadesView);
+                    break;
+                case 7:
+                    manageCRUD(pedidosView);
                     break;
                 case 0:
                     System.out.println("Saliendo del programa.");
