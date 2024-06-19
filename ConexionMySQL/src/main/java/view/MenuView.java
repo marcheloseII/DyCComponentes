@@ -32,7 +32,7 @@ public class MenuView {
             System.out.println("3. Doctores");
             System.out.println("4. Clientes");
             System.out.println("5. Especialidades");
-            System.out.println("8. Especialidades");
+            System.out.println("8. Empleados");
             System.out.println("0. Salir");
 
             option = getValidIntInput();
