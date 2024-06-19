@@ -4,17 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de proyecto completo">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/MenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CursoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/DoctorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DoctorDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/MenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/MenuView.class" afterDir="false" />
+    <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de singleton de conexion">
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/EmpleadosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/EmpleadosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PedidosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PedidosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/SucursalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SucursalesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/ClientDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ClientDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/ClientModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ClientModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/DoctorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DoctorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/EmpleadosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EmpleadosDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/EmpleadosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EmpleadosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/EspecialidadesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EspecialidadesModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PedidosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PedidosDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PedidosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PedidosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/SucursalesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/SucursalesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/SucursalesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/SucursalesModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/conexion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/CRUDView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/CRUDView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ClientView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ClientView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/DoctorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/DoctorView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmpleadosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmpleadosView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EspecialidadesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EspecialidadesView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/PedidosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/PedidosView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/PreciosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/PreciosView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/SucursalesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/SucursalesView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,26 +89,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chelo/OneDrive/Documentos/GitHub/DyCComponentes/ConexionMySQL",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chelo/OneDrive/Documentos/GitHub/DyCComponentes/ConexionMySQL&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="view" />
@@ -138,6 +164,7 @@
       <workItem from="1718763095709" duration="1701000" />
       <workItem from="1718766678892" duration="84000" />
       <workItem from="1718767816252" duration="696000" />
+      <workItem from="1718768854681" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="commit de proyecto completo">
       <created>1718170394386</created>
@@ -146,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718170394386</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit de singleton de conexion">
+      <created>1718769017992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718769017992</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,14 +200,15 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit de proyecto completo" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit de proyecto completo" />
+    <MESSAGE value="commit de singleton de conexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit de singleton de conexion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/conexionmysql/Main.java</url>
-          <line>7</line>
+          <line>3</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
