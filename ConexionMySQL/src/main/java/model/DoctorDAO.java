@@ -16,7 +16,7 @@ public class DoctorDAO {
 
     // Create a new doctor record
     public void createDoctor(DoctorModel model) throws SQLException {
-        String query = "INSERT INTO `Doctors_AFS`(`doctorID`, `name`, `birthday`, `sex`, `nationality`, `civilStatus`, `address`, `phoneNumber`, `email`) VALUES (?,?,?,?,?,?,?,?,?)";
+        String query = "INSERT INTO `Doctores_AFS`(`doctorID`, `nombre`, `fechaNacimiento`, `sexo`, `nacionalidad`, `estadoCivil`, `direccion`, `telefono`, `correoElectronico`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, model.getDoctorID());
             stmt.setString(2, model.getName());
@@ -33,7 +33,7 @@ public class DoctorDAO {
 
     // Read a doctor record by ID
     public DoctorModel getDoctorByID(int doctorID) throws SQLException {
-        String query = "SELECT * FROM `Doctors_AFS` WHERE `doctorID` = ?";
+        String query = "SELECT * FROM `Doctores_AFS` WHERE `doctorID` = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, doctorID);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -58,19 +58,19 @@ public class DoctorDAO {
     // Read all doctor records
     public List<DoctorModel> getAllDoctors() throws SQLException {
         List<DoctorModel> doctors = new ArrayList<>();
-        String query = "SELECT * FROM `Doctors_AFS`";
+        String query = "SELECT * FROM `Doctores_AFS`";
         try (PreparedStatement stmt = connection.prepareStatement(query); ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 doctors.add(new DoctorModel(
                         rs.getInt("doctorID"),
-                        rs.getString("name"),
-                        rs.getDate("birthday"),
-                        rs.getString("sex"),
-                        rs.getString("nationality"),
-                        rs.getString("civilStatus"),
-                        rs.getString("address"),
-                        rs.getInt("phoneNumber"),
-                        rs.getString("email")
+                        rs.getString("nombre"),
+                        rs.getDate("fechaNacimiento"),
+                        rs.getString("sexo"),
+                        rs.getString("nacionalidad"),
+                        rs.getString("estadoCivil"),
+                        rs.getString("direccion"),
+                        rs.getInt("telefono"),
+                        rs.getString("correoElectronico")
                 ));
             }
         }
@@ -79,7 +79,7 @@ public class DoctorDAO {
 
     // Update a doctor record
     public void updateDoctor(DoctorModel model) throws SQLException {
-        String query = "UPDATE `Doctors_AFS` SET `name` = ?, `birthday` = ?, `sex` = ?, `nationality` = ?, `civilStatus` = ?, `address` = ?, `phoneNumber` = ?, `email` = ? WHERE `doctorID` = ?";
+        String query = "UPDATE `Doctores_AFS` SET `nombre` = ?, `fechaNacimiento` = ?, `sexo` = ?, `nacionalidad` = ?, `estadoCivil` = ?, `direccion` = ?, `telefono` = ?, `correoElectronico` = ? WHERE `doctorID` = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, model.getName());
             stmt.setDate(2, model.getBirthdate());
@@ -96,7 +96,7 @@ public class DoctorDAO {
 
     // Delete a doctor record by ID
     public void deleteDoctor(int doctorID) throws SQLException {
-        String query = "DELETE FROM `Doctors_AFS` WHERE `doctorID` = ?";
+        String query = "DELETE FROM `Doctores_AFS` WHERE `doctorID` = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, doctorID);
             stmt.executeUpdate();
