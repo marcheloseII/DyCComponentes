@@ -61,14 +61,14 @@ public class PedidosDAO {
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
             while (rs.next()) {
                 PedidosModel pedido = new PedidosModel(
-                        rs.getInt("ID pedido"),
-                        rs.getString("descripcion"),
-                        rs.getDate("fechaVenta"),
-                        rs.getInt("clienteID"),
-                        rs.getInt("recetasID"),
-                        rs.getInt("preciosID"),
-                        rs.getInt("farmaciaID"),
-                        rs.getString("nombreFarmacia")
+                        rs.getInt("IDpedido"),
+                        rs.getString("Descripcion"),
+                        rs.getDate("FechaDeVenta"),
+                        rs.getInt("ClienteID"),
+                        rs.getInt("RecetasID"),
+                        rs.getInt("PreciosID"),
+                        rs.getInt("FarmaciaID"),
+                        rs.getString("NombreFarmacia")
                 );
                 pedidosList.add(pedido);
             }

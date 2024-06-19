@@ -4,43 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de singleton de conexion">
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/EmpleadosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/EmpleadosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PedidosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PedidosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SucursalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SucursalesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ClientDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ClientDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ClientModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ClientModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/DoctorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DoctorModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/EmpleadosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EmpleadosDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/EmpleadosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EmpleadosModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/EspecialidadesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EspecialidadesModel.class" afterDir="false" />
+    <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de ajuste de sucursales a menuView">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PedidosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PedidosDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/PedidosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PedidosDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PedidosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PedidosModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/SucursalesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/SucursalesDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/SucursalesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/SucursalesModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/CRUDView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/CRUDView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/ClientView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ClientView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/DoctorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/DoctorView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/EmpleadosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmpleadosView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/EspecialidadesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EspecialidadesView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/PedidosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/PedidosView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/PreciosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/PreciosView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/SucursalesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/SucursalesView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +131,7 @@
       <workItem from="1718763095709" duration="1701000" />
       <workItem from="1718766678892" duration="84000" />
       <workItem from="1718767816252" duration="696000" />
-      <workItem from="1718768854681" duration="674000" />
+      <workItem from="1718768854681" duration="1310000" />
     </task>
     <task id="LOCAL-00001" summary="commit de proyecto completo">
       <created>1718170394386</created>
@@ -180,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718769017992</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit de ajuste de sucursales a menuView">
+      <created>1718769734665</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718769734665</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +175,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit de proyecto completo" />
     <MESSAGE value="commit de singleton de conexion" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit de singleton de conexion" />
+    <MESSAGE value="commit de ajuste de sucursales a menuView" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit de ajuste de sucursales a menuView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
