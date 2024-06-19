@@ -19,8 +19,8 @@ public class EmpleadosController {
     public EmpleadosController(EmpleadosView viewEmpleados, ConsoleView viewConsole) {
         this.viewConsole = viewConsole;
         this.viewEmpleados = viewEmpleados;
-        Connection connection = conexion.getConnection();
-        this.empleadosDAO = new EmpleadosDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.empleadosDAO = new EmpleadosDAO(conn);
     }
 
     public void insertEmpleado(int id, String nombre, String rol, String email, char sexo, int doctorID) {

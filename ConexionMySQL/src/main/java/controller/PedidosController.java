@@ -17,8 +17,8 @@ public class PedidosController {
     public PedidosController(ConsoleView viewConsole, PedidosView pedidosView) {
         this.viewConsole = viewConsole;
         this.pedidosView = pedidosView;
-        Connection connection = conexion.getConnection();
-        this.pedidosDAO = new PedidosDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.pedidosDAO = new PedidosDAO(conn);
     }
 
     // Create

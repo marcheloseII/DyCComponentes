@@ -17,8 +17,8 @@ public class SucursalesController {
 
     public SucursalesController(SucursalesView sucursalesview ,ConsoleView viewConsole){
         this.viewConsole = viewConsole;
-        Connection connection = conexion.getConnection();
-        this.sucursalDAO = new SucursalesDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.sucursalDAO = new SucursalesDAO(conn);
     }
 
     public void agregarSucursal(int id, String nombre, String locacion, String clientes, String doctores, String recetas){

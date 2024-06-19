@@ -18,8 +18,8 @@ public class PreciosController {
     public PreciosController(PreciosView viewPrecios, ConsoleView viewConsole) {
         this.viewConsole = viewConsole;
         this.viewPrecios = viewPrecios;
-        Connection connection = conexion.getConnection();
-        this.preciosDAO = new PreciosDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.preciosDAO = new PreciosDAO(conn);
     }
 
     public void insertPrecio(int id, String producto, int precio, Date fecha_actualizacion) {

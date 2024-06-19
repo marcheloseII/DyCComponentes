@@ -19,8 +19,8 @@ public class ClientController {
     public ClientController(ClientView viewClient, ConsoleView viewConsole) {
         this.clientView = viewClient;
         this.viewConsole = viewConsole;
-        Connection connection = conexion.getConnection();
-        this.clientDAO = new ClientDAO(connection);
+        Connection conn = conexion.getInstance().getConnection();
+        this.clientDAO = new ClientDAO(conn);
     }
 
     // Create
