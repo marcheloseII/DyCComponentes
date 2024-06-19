@@ -2,6 +2,7 @@ package view;
 
 import controller.RecetasMedicasController;
 import controller.SucursalesController;
+import model.RecetasMedicasModel;
 import model.SucursalesModel;
 
 import java.util.List;
@@ -19,8 +20,12 @@ public class SucursalesView implements CRUDView {
     public void showAllSucursales(List<SucursalesModel> sucursales) {
         System.out.println("Lista de sucursales:");
         for (SucursalesModel sucursal : sucursales) {
-            System.out.println("ID: " + sucursal.getId() + ", Nombre: " + sucursal.getNombre() + ", Locacion: " + sucursal.getLocacion()
-                    + ", Doctores: " + sucursal.getClienteID() + ", Clientes: " + sucursal.getDoctorID() + ", Receta: " + sucursal.getRecetaID());
+            System.out.println("ID: " + sucursal.getId() +
+                    ", Nombre: " + sucursal.getNombre() +
+                    ", Locacion: " + sucursal.getLocacion() +
+                    ", Doctores: " + sucursal.getClienteID() +
+                    ", Clientes: " + sucursal.getDoctorID() +
+                    ", Receta: " + sucursal.getRecetaID());
         }
         System.out.println();
     }
@@ -47,8 +52,8 @@ public class SucursalesView implements CRUDView {
 
     @Override
     public void leer() {
-        System.out.println("\n--- Ver Todas las Sucursales ---");
         sucursalesController.getAllSucursales();
+        System.out.println("\n--- Ver Todas las Sucursales ---");
     }
 
     @Override

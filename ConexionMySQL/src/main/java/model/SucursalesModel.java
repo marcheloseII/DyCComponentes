@@ -66,4 +66,9 @@ public class SucursalesModel {
         this.recetaID = recetaID;
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Nombre: " + nombre + ", Locacion: " + locacion +
+                ", Cliente ID: " + clienteID + ", Doctor ID: " + doctorID + ", Receta ID: " + recetaID;
+    }
 }

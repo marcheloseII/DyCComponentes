@@ -37,15 +37,15 @@ public class SucursalesController {
         try {
             List<SucursalesModel> sucursales = sucursalDAO.getAllSucursales();
             if (!sucursales.isEmpty()) {
-                System.out.println("Lista de recetas médicas:");
+                    System.out.println("Lista de sucursales:");
                 for (SucursalesModel sucursal : sucursales) {
                     System.out.println(sucursal);
                 }
             } else {
-                System.out.println("No hay recetas médicas registradas.");
+                System.out.println("No hay sucursales registradas.");
             }
         } catch (SQLException e) {
-            System.err.println("Error al obtener lista de recetas médicas: " + e.getMessage());
+            System.err.println("Error al obtener lista de sucursales: " + e.getMessage());
         }
     }
 
