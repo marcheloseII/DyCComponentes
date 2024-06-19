@@ -14,7 +14,7 @@ public class conexion {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Conectado al server remotto");
+            System.out.println("Conectado al server remoto");
         } catch ( SQLException e){
             System.err.println("Fallo la conexion" + e.getMessage());
         }
