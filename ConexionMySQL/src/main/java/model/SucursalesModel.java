@@ -5,16 +5,16 @@ public class SucursalesModel {
     private int id;
     private String nombre;
     private String locacion;
-    private String doctores;
-    private String clientes;
-    private String recetas;
+    private String clienteID; // Clave foránea hacia Clientes
+    private String doctorID; // Clave foránea hacia Doctores
+    private String recetaID; // Clave foránea hacia Recetas
 
-    public SucursalesModel(String nombre, String locacion, String doctores, String clientes, String recetas) {
+    public SucursalesModel(String nombre, String locacion, String clientes, String doctores, String recetas) {
         this.nombre = nombre;
         this.locacion = locacion;
-        this.doctores = doctores;
-        this.clientes = clientes;
-        this.recetas = recetas;
+        this.clienteID = clientes;
+        this.doctorID = doctores;
+        this.recetaID = recetas;
     }
 
     public int getId() {
@@ -41,28 +41,28 @@ public class SucursalesModel {
         this.locacion = locacion;
     }
 
-    public String getDoctores() {
-        return doctores;
+    public String getClienteID() {
+        return clienteID;
     }
 
-    public void setDoctores(String doctores) {
-        this.doctores = doctores;
+    public void setClienteID(String clienteID) {
+        this.clienteID = clienteID;
     }
 
-    public String getClientes() {
-        return clientes;
+    public String getDoctorID() {
+        return doctorID;
     }
 
-    public void setClientes(String clientes) {
-        this.clientes = clientes;
+    public void setDoctorID(String doctorID) {
+        this.doctorID = doctorID;
     }
 
-    public String getRecetas() {
-        return recetas;
+    public String getRecetaID() {
+        return recetaID;
     }
 
-    public void setRecetas(String recetas) {
-        this.recetas = recetas;
+    public void setRecetaID(String recetaID) {
+        this.recetaID = recetaID;
     }
 
 }

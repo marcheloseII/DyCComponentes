@@ -19,7 +19,7 @@ public class SucursalesView {
         System.out.println("Lista de sucursales:");
         for (SucursalesModel sucursal : sucursales) {
             System.out.println("ID: " + sucursal.getId() + ", Nombre: " + sucursal.getNombre() + ", Locacion: " + sucursal.getLocacion()
-                    + ", Doctores: " + sucursal.getDoctores() + ", Clientes: " + sucursal.getClientes() + ", Receta: " + sucursal.getRecetas());
+                    + ", Doctores: " + sucursal.getClienteID() + ", Clientes: " + sucursal.getDoctorID() + ", Receta: " + sucursal.getRecetaID());
         }
         System.out.println();
     }
@@ -31,11 +31,11 @@ public class SucursalesView {
         String nombre = scanner.nextLine();
         System.out.print("Locacion: ");
         String locacion = scanner.nextLine();
-        System.out.print("Doctor: ");
+        System.out.print("Ingrese el ID del cliente: ");
         String doctor = scanner.nextLine();
-        System.out.print("Cliente: ");
+        System.out.print("Ingrese el ID del doctor: ");
         String cliente = scanner.nextLine();
-        System.out.print("Receta: ");
+        System.out.print("Ingrese el ID de la receta asignada: ");
         String receta = scanner.nextLine();
         System.out.println("--------------------");
 
@@ -55,11 +55,11 @@ public class SucursalesView {
         String nombre = scanner.nextLine();
         System.out.print("Locacion: ");
         String locacion = scanner.nextLine();
-        System.out.print("Doctor: ");
+        System.out.print("Ingrese el ID del cliente: ");
         String doctor = scanner.nextLine();
-        System.out.print("Cliente: ");
+        System.out.print("Ingrese el ID del doctor: ");
         String cliente = scanner.nextLine();
-        System.out.print("Receta: ");
+        System.out.print("Ingrese el ID de la receta asignada: ");
         String receta = scanner.nextLine();
         System.out.println("--------------------");
 

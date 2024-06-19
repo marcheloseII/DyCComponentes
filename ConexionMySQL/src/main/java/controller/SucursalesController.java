@@ -1,10 +1,7 @@
 package controller;
 
-import model.SucursalesDAO;
-import model.SucursalesModel;
-import model.conexion;
+import model.*;
 import view.ConsoleView;
-import view.DoctorView;
 import view.SucursalesView;
 
 import java.sql.Connection;
@@ -17,14 +14,15 @@ public class SucursalesController {
     private SucursalesView sucursalView;
     private SucursalesDAO sucursalDAO;
 
+
     public SucursalesController(ConsoleView viewConsole){
         this.viewConsole = viewConsole;
         Connection connection = conexion.getConnection();
         this.sucursalDAO = new SucursalesDAO(connection);
     }
 
-    public void agregarSucursal(String nombre, String locacion, String doctores, String clientes, String recetas){
-        SucursalesModel datos = new SucursalesModel(nombre, locacion, doctores, clientes, recetas);
+    public void agregarSucursal(String nombre, String locacion, String clientes, String doctores, String recetas){
+        SucursalesModel datos = new SucursalesModel(nombre, locacion, clientes, doctores, recetas);
 
         try
         {
@@ -45,8 +43,8 @@ public class SucursalesController {
     }
 
     // Update
-    public void updateSucursal(String nombre, String locacion, String doctores, String clientes, String recetas) {
-        SucursalesModel data = new SucursalesModel(nombre, locacion, doctores, clientes, recetas);
+    public void updateSucursal(String nombre, String locacion, String clientes, String doctores, String recetas) {
+        SucursalesModel data = new SucursalesModel(nombre, locacion, clientes, doctores, recetas);
 
         try {
             SucursalesDAO.updateSucursal(data);
