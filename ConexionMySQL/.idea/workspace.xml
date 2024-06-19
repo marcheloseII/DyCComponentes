@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18d68edb-d7f7-4a75-bd5c-656f005942bc" name="Changes" comment="commit de proyecto completo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/EmpleadosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/EmpleadosDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/EmpleadosModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/EmpleadosView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conexionmysql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conexionmysql/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConexionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CursoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CursoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/EspecialidadesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PreciosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RecetasMedicasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/CursoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CursoModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/CursoModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/EspecialidadesDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PreciosModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RecetasMedicasModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conexionmysql/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/CRUDView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/CRUDView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/MenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/MenuView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/PreciosView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/PreciosView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/RecetasMedicasView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/EmpleadosView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/EmpleadosView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/MenuView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +127,8 @@
       <workItem from="1718676270617" duration="3000" />
       <workItem from="1718676280966" duration="2024000" />
       <workItem from="1718746082263" duration="3154000" />
-      <workItem from="1718749276445" duration="389000" />
+      <workItem from="1718749276445" duration="1190000" />
+      <workItem from="1718763095709" duration="1701000" />
     </task>
     <task id="LOCAL-00001" summary="commit de proyecto completo">
       <created>1718170394386</created>

@@ -39,10 +39,20 @@ public class EmpleadosView implements CRUDView {
         System.out.print("Ingrese el sexo del empleado (M/F): ");
         char sexo = scanner.nextLine().charAt(0);
         System.out.print("Ingrese el id del doctor asociado: ");
+
         int doctorID = Integer.parseInt(scanner.nextLine());
         empleadosController.insertEmpleado(id, nombre, rol, email, sexo, doctorID);
         System.out.println("Empleado creado exitosamente.");
     }
+
+    /*
+    public void showDoctoresDetails(DoctoresModel doctor) {
+        System.out.println("Los Doctores disponibles son:");
+        System.out.println("ID: " + precio.getdoctorID());
+        System.out.println("Nombre: " + precio.getname());
+        System.out.println();
+    }
+    */
 
     @Override
     public void leer() {
